@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Us</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Join Us</h1>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+            
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+            
+            <button type="submit">Join</button>
+        </form>
+    </div>
+</body>
+</html>
+<style>/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url(/IMG_6523.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: blue;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="email"]:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+</style>
+<script>    <script>
+      document.getElementById("joinForm").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent form submission
+        // Retrieve form data
+        var name = document.getElementById("name").value;
+        var phone = document.getElementById("phone").value;
+        var email = document.getElementById("email").value;
+
+        // Perform validation (you can add more validation if needed)
+        if (name.trim() === "" || phone.trim() === "" || email.trim() === "") {
+          alert("Please fill in all fields.");
+          return;
+        }
+
+        // If all fields are filled, you can proceed with form submission or any other action
+        // For demonstration, let's just log the form data
+        console.log("Name:", name);
+        console.log("Phone Number:", phone);
+        console.log("Email Address:", email);
+
+        // Optionally, you can reset the form after submission
+        document.getElementById("joinForm").reset();
+      });
+    </script></script>
